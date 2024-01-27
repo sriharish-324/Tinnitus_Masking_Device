@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>../../musicqt/icons8-reload-100/Binaural.qml</file>
+        <file>../../musicqt/icons8-reload-100/Coloured.qml</file>
+        <file>../../musicqt/icons8-reload-100/MusicWindow.qml</file>
+        <file>../../musicqt/icons8-reload-100/Natural.qml</file>
+        <file>../../musicqt/icons8-reload-100/Vehicle.qml</file>
+        <file>Binaural.qml</file>
+        <file>Coloured.qml</file>
+        <file>MusicWindow.qml</file>
+        <file>Natural.qml</file>
+        <file>Vehicle.qml</file>
+    </qresource>
+</RCC>

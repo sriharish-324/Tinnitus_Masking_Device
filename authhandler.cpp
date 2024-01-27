@@ -26,7 +26,7 @@ AuthHandler::~AuthHandler()
 QString AuthHandler::refreshDatabase()
 {
     // Perform a fresh GET request to fetch the updated data from the database
-    QString endPoint = "https://faceattendancerealtime-8dce7-default-rtdb.firebaseio.com/Students.json?auth=" + m_idToken;
+    QString endPoint = URL_TO_DB + m_idToken;
     m_networkReply = m_networkAccessManager->get(QNetworkRequest(QUrl(endPoint)));
     connect(m_networkReply, &QNetworkReply::readyRead, this, &AuthHandler::networkReplyReadyRead);
     return  AuthHandler::fetchValuesAsString();
@@ -34,11 +34,11 @@ QString AuthHandler::refreshDatabase()
 void AuthHandler::writeFrequencyToFirebase(const QString &deviceId, const QString &frequency) {
 
 QString timestamp = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
-    QString endpoint = "https://faceattendancerealtime-8dce7-default-rtdb.firebaseio.com/Students/DID324/sri/frequency/" + timestamp + ".json?auth=" + m_idToken;
+    QString endpoint = URL_TO_DB + timestamp + ".json?auth=" + m_idToken;
     QJsonObject frequencyObject;
     frequencyObject[timestamp] = frequency;
     QJsonDocument jsonDocument(frequencyObject);
-    QNetworkRequest request(QUrl("https://faceattendancerealtime-8dce7-default-rtdb.firebaseio.com/Students/DID324/sri/frequency/" + timestamp + ".json?auth=" + m_idToken)); request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    QNetworkRequest request(QUrl(URL_TO_DB + timestamp + ".json?auth=" + m_idToken)); request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     m_networkReply = m_networkAccessManager->put(request, jsonDocument.toJson());
     connect(m_networkReply, &QNetworkReply::finished, this, &AuthHandler::writeFrequencyFinished);
 }

@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     authHandler.setAPIKey("AIzaSyAx-fgaHPWsSLZmYQAVOGjtAuVGaZWu-bU");
 
     //This is the call to sign a user up using Email/Password
-   // authHandler.signUserUp("sriharish.cs21@bitsathy.ac.in", "Janusri@324");
+   // authHandler.signUserUp("email", "password");
 
     //This is the call to sign an existing user in
    authHandler.signUserIn("sriharish.cs21@bitsathy.ac.in", "Janusri@324");

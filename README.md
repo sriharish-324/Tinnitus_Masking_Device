@@ -3,8 +3,8 @@
 ![Device](https://github.com/sriharish-324/Tinnitus_Masking_Device/blob/main/images/pro.jpg)
 # App
 <img src="https://github.com/sriharish-324/Tinnitus_Masking_Device/blob/main/images/nd3.jpg" alt="Alt Text" width="200"/>
-## Abstract
 
+# Abstract
 Tinnitus, a persistent ringing in the ears, can significantly impair an individual's quality of life. The Tinnitus Masking Device (TMD) offers a comprehensive solution leveraging Raspberry Pi 3 or above with Ubuntu 18.02, Qt 5.4, and Python 3.9 with Firebase integration. This device combines pulse and galvanic sensor monitoring with personalized sound therapy to manage tinnitus effectively.
 
 The TMD allows users to access a wide range of tinnitus sound frequencies (0 to 15000 Hz) through a user-friendly interface developed using Qt. Real-time monitoring of the user's physiological indicators (pulse and galvanic response) enables timely intervention in case of anomalies, providing relief through autonomous playback of reverse frequencies.
